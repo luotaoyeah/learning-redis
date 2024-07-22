@@ -10,3 +10,13 @@ GET foo
 
 SET foo "BAR"
 GET foo
+
+
+-- MGET
+-- https://redis.io/docs/latest/commands/mget/
+-- 获取多个 KEY 的值, 以数组的形式返回,
+-- ----------------------------------------------------------------------------------------------------
+
+SET foo "FOO"
+SET bar "BAR"
+MGET foo bar
