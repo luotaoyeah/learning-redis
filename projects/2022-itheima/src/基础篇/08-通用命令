@@ -16,6 +16,17 @@ DEL foo bar
 -- -- 如果 KEY 不存在, 则返回 0,
 DEL TEST
 
+
 -- EXISTS 判断某个 KEY 是否存在,
 
 EXISTS TEST
+
+
+-- TTL 查看某个 KEY 的剩余存活时间, 单位为秒,
+
+-- -- 返回值 -2 表示该 KEY 不存在,
+TTL bar
+
+-- -- 返回值 -1 表示该 KEY 永久有效,
+SET foo "FOO"
+TTL foo
