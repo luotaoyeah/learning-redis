@@ -1,0 +1,12 @@
+-- SET
+-- https://redis.io/docs/latest/commands/set/
+-- 如果 KEY 尚不存在, 则添加该 KEY, 如果 KEY 已经存在, 则修改该 KEY 的值,
+-- ----------------------------------------------------------------------------------------------------
+
+GET foo
+
+SET foo "FOO"
+GET foo
+
+SET foo "BAR"
+GET foo
