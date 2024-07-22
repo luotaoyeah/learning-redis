@@ -15,3 +15,7 @@ DEL foo bar
 
 -- -- 如果 KEY 不存在, 则返回 0,
 DEL TEST
+
+-- EXISTS 判断某个 KEY 是否存在,
+
+EXISTS TEST
