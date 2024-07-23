@@ -36,3 +36,14 @@ RPUSH list:01 A B C
 LRANGE list:01 0 -1
 LPOP list:01
 DEL list:01
+
+
+-- RPOP
+-- ----------------------------------------------------------------------------------------------------
+-- https://redis.io/docs/latest/commands/rpop/
+-- 从右侧删除一个元素, 并返回该元素,
+
+RPUSH list:01 A B C
+LRANGE list:01 0 -1
+RPOP list:01
+DEL list:01
