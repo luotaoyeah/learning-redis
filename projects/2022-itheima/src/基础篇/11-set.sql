@@ -29,3 +29,15 @@ DEL set:01
 SADD set:01 A B C
 SMEMBERS set:01
 DEL set:01
+
+
+-- SISMEMBER
+-- ----------------------------------------------------------------------------------------------------
+-- https://redis.io/docs/latest/commands/sismember/
+-- 判断某个元素是否属于集合
+
+SADD set:01 A B C
+SMEMBERS set:01
+SISMEMBER set:01 A
+SISMEMBER set:01 D
+DEL set:01
