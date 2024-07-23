@@ -36,6 +36,7 @@ DEL user:3
 -- HGETALL
 -- ----------------------------------------------------------------------------------------------------
 -- https://redis.io/docs/latest/commands/hgetall/
+-- 类似于 HashMap.entrySet()
 
 -- 获取某个 key 下的所有的 field/value 对, 以数组的形式返回,
 HSET user:3 name LUOTAO age 18
@@ -46,6 +47,7 @@ DEL user:3
 -- HKEYS
 -- ----------------------------------------------------------------------------------------------------
 -- https://redis.io/docs/latest/commands/hkeys/
+-- 类似于 HashMap.keySet()
 
 -- 获取某个 key 下的所有的 field, 以数组的形式返回,
 HSET user:3 name LUOTAO age 18
@@ -56,6 +58,7 @@ DEL user:3
 -- HVALS
 -- ----------------------------------------------------------------------------------------------------
 -- https://redis.io/docs/latest/commands/hvals/
+-- 类似于 HashMap.values()
 
 -- 获取某个 key 下的所有的 value, 以数组的形式返回,
 HSET user:3 name LUOTAO age 18
