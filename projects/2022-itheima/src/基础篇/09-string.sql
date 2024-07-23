@@ -12,10 +12,22 @@ SET foo "BAR"
 GET foo
 DEL foo
 
--- -- string value 包含特殊符号时, 比如双引号, 需要进行转义,
-SET b "A\"B"
+-- 可以使用双引号包裹 value, 此时如果 value 中已经包含双引号, 则需要转义,
+SET a "A\"B"
+GET a
+DEL a
+
+
+-- 可以使用单引号包裹 value, 此时如果 value 中已经包含单引号, 则需要转义,
+SET b 'A\'B'
 GET b
 DEL b
+
+-- 如果 value 中不包含特殊字符, 则可以不用双引号或者单引号包裹,
+SET c [A"B]
+GET c
+DEL c
+
 
 
 -- MSET
