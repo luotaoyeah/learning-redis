@@ -41,3 +41,15 @@ SMEMBERS set:01
 SISMEMBER set:01 A
 SISMEMBER set:01 D
 DEL set:01
+
+
+-- SCARD
+-- ----------------------------------------------------------------------------------------------------
+-- https://redis.io/docs/latest/commands/scard/
+-- 返回集合中的元素个数
+
+SADD set:01 A B C
+SCARD set:01
+SREM set:01 A B
+SCARD set:01
+DEL set:01
