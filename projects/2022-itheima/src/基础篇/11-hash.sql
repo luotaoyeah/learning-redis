@@ -31,3 +31,13 @@ DEL user:3
 HSET user:3 name LUOTAO age 18
 HMGET user:3 name age
 DEL user:3
+
+
+-- HGETALL
+-- ----------------------------------------------------------------------------------------------------
+-- https://redis.io/docs/latest/commands/hgetall/
+
+-- 获取某个 key 下的所有的 field/value 对, 以数组的形式返回,
+HSET user:3 name LUOTAO age 18
+HGETALL user:3
+DEL user:3
