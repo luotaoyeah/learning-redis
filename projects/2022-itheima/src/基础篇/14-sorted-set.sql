@@ -57,3 +57,13 @@ DEL sortedset:01
 ZADD sortedset:01 1 A 3 C 2 B 4 D
 ZINCRBY sortedset:01 10 C
 DEL sortedset:01
+
+
+-- ZRANGE
+-- ----------------------------------------------------------------------------------------------------
+-- https://redis.io/docs/latest/commands/zrange/
+-- 获取指定范围内的元素, 范围默认指的是 index 的范围, 也可以指定 score 的范围(BYSCORE), 或者字符的范围(BYLEX),
+
+ZADD sortedset:01 1 A 3 C 2 B 4 D
+ZRANGE sortedset:01 1 2 WITHSCORES
+DEL sortedset:01
