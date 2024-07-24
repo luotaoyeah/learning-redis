@@ -26,3 +26,14 @@ DEL sortedset:01
 ZADD sortedset:01 1 A 3 C 2 B
 ZSCORE sortedset:01 C
 DEL sortedset:01
+
+
+-- ZRANK
+-- ----------------------------------------------------------------------------------------------------
+-- https://redis.io/docs/latest/commands/zrank/
+-- 获取某个元素的排名,
+
+ZADD sortedset:01 1 A 3 C 2 B
+ZRANK sortedset:01 C
+ZREVRANK sortedset:01 C
+DEL sortedset:01
