@@ -1,4 +1,4 @@
-package com.luotao.learningredis;
+package com.luotao.learningredis.jedis;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;

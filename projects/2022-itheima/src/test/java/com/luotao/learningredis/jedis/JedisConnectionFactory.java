@@ -1,4 +1,4 @@
-package com.luotao.learningredis;
+package com.luotao.learningredis.jedis;
 
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
