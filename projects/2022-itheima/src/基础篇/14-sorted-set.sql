@@ -37,3 +37,13 @@ ZADD sortedset:01 1 A 3 C 2 B
 ZRANK sortedset:01 C
 ZREVRANK sortedset:01 C
 DEL sortedset:01
+
+
+-- ZCARD
+-- ----------------------------------------------------------------------------------------------------
+-- https://redis.io/docs/latest/commands/zcard/
+-- 获取元素个数,
+
+ZADD sortedset:01 1 A 3 C 2 B 4 D
+ZCARD sortedset:01
+DEL sortedset:01
