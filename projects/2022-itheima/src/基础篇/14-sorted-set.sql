@@ -5,3 +5,14 @@
 
 ZADD sortedset:01 1 A 3 C 2 B
 ZADD sortedset:01 1 A 3 C 4 D
+DEL sortedset:01
+
+
+-- ZREM
+-- ----------------------------------------------------------------------------------------------------
+-- https://redis.io/docs/latest/commands/zrem/
+-- 删除多个元素,
+
+ZADD sortedset:01 1 A 3 C 2 B
+ZREM sortedset:01 C B
+DEL sortedset:01
