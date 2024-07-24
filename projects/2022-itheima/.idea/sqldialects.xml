@@ -2,8 +2,9 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/src/基础篇/11-hash.sql" dialect="Redis" />
-    <file url="file://$PROJECT_DIR$/src/基础篇/11-list.sql" dialect="Redis" />
-    <file url="file://$PROJECT_DIR$/src/基础篇/11-set.sql" dialect="Redis" />
+    <file url="file://$PROJECT_DIR$/src/基础篇/12-list.sql" dialect="Redis" />
+    <file url="file://$PROJECT_DIR$/src/基础篇/13-set.sql" dialect="Redis" />
+    <file url="file://$PROJECT_DIR$/src/基础篇/14-sorted-set.sql" dialect="Redis" />
     <file url="PROJECT" dialect="Redis" />
   </component>
 </project>

@@ -5,6 +5,7 @@
 
 -- 设置某个 key 中的一个 field/value 对,
 HSET user:3 name LUOTAO
+HSET user:3 age 18
 DEL user:3
 
 -- 设置某个 key 中的多个 field/value 对,

@@ -18,13 +18,13 @@ GET bar
 
 DEL foo bar
 
--- -- 如果 key 不存在, 则返回 0,
+-- 如果 key 不存在, 则返回 0,
 DEL TEST
 
 
 -- EXISTS
 -- ----------------------------------------------------------------------------------------------------
--- https://redis.io/docs/latest/commands/expire/
+-- https://redis.io/docs/latest/commands/exists/
 -- 判断某个 key 是否存在,
 
 EXISTS TEST
@@ -35,10 +35,10 @@ EXISTS TEST
 -- https://redis.io/docs/latest/commands/ttl/
 -- 查看某个 key 的剩余存活时间, 单位为秒,
 
--- -- 返回值 -2 表示该 key 不存在,
+-- 返回值 -2 表示该 key 不存在,
 TTL bar
 
--- -- 返回值 -1 表示该 key 永久有效,
+-- 返回值 -1 表示该 key 永久有效,
 SET foo "FOO"
 TTL foo
 DEL foo

@@ -16,17 +16,6 @@ RPUSH list:01 A B C
 DEL list:01
 
 
--- LRANGE
--- ----------------------------------------------------------------------------------------------------
--- https://redis.io/docs/latest/commands/lrange/
--- 返回指定范围内的元素,
-
--- 0 表示第一个元素, -1 表示最后一个元素,
-RPUSH list:01 A B C
-LRANGE list:01 0 -1
-DEL list:01
-
-
 -- LPOP
 -- ----------------------------------------------------------------------------------------------------
 -- https://redis.io/docs/latest/commands/lpop/
@@ -46,4 +35,15 @@ DEL list:01
 RPUSH list:01 A B C
 LRANGE list:01 0 -1
 RPOP list:01
+DEL list:01
+
+
+-- LRANGE
+-- ----------------------------------------------------------------------------------------------------
+-- https://redis.io/docs/latest/commands/lrange/
+-- 返回指定范围内的元素,
+
+-- 0 表示第一个元素, -1 表示最后一个元素,
+RPUSH list:01 A B C
+LRANGE list:01 0 -1
 DEL list:01

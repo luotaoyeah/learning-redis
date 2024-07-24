@@ -46,7 +46,7 @@ DEL set:01
 -- SCARD
 -- ----------------------------------------------------------------------------------------------------
 -- https://redis.io/docs/latest/commands/scard/
--- 返回集合中的元素个数
+-- 返回集合中的元素个数, CARDINALITY
 
 SADD set:01 A B C
 SCARD set:01
