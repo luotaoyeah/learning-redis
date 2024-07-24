@@ -31,7 +31,7 @@ DEL sortedset:01
 -- ZRANK
 -- ----------------------------------------------------------------------------------------------------
 -- https://redis.io/docs/latest/commands/zrank/
--- 获取某个元素的排名,
+-- 获取某个元素的排名, 从 0 开始,
 
 ZADD sortedset:01 1 A 3 C 2 B
 ZRANK sortedset:01 C
@@ -42,8 +42,18 @@ DEL sortedset:01
 -- ZCARD
 -- ----------------------------------------------------------------------------------------------------
 -- https://redis.io/docs/latest/commands/zcard/
--- 获取元素个数,
+-- 获取所有元素个数,
 
 ZADD sortedset:01 1 A 3 C 2 B 4 D
 ZCARD sortedset:01
+DEL sortedset:01
+
+
+-- ZINCRBY
+-- ----------------------------------------------------------------------------------------------------
+-- https://redis.io/docs/latest/commands/zincrby/
+-- 给某个元素的 score 加上某个数量,
+
+ZADD sortedset:01 1 A 3 C 2 B 4 D
+ZINCRBY sortedset:01 10 C
 DEL sortedset:01
