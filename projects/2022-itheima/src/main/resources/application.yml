@@ -1,0 +1,9 @@
+spring:
+    application:
+        name: learning-redis.2022-itheima
+
+    redis:
+        host: localhost
+        port: 26379
+        password: ""
+        database: 0
