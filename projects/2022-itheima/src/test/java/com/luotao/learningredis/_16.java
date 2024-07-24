@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.HashMap;
 import java.util.Map;
 
+// jedis 基本用法
 public class _16 extends _00 {
 
     @Test
