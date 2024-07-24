@@ -16,3 +16,13 @@ DEL sortedset:01
 ZADD sortedset:01 1 A 3 C 2 B
 ZREM sortedset:01 C B
 DEL sortedset:01
+
+
+-- ZSCORE
+-- ----------------------------------------------------------------------------------------------------
+-- https://redis.io/docs/latest/commands/zscore/
+-- 获取某个元素的 score,
+
+ZADD sortedset:01 1 A 3 C 2 B
+ZSCORE sortedset:01 C
+DEL sortedset:01
