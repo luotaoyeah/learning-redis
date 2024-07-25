@@ -33,7 +33,6 @@ import java.util.concurrent.Executors;
  * 服务实现类
  * </p>
  *
- * @author 虎哥
  * @since 2021-12-22
  */
 @Slf4j
@@ -64,7 +63,8 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
 
     @PostConstruct
     private void init() {
-        SECKILL_ORDER_EXECUTOR.submit(new VoucherOrderHandler());
+        // TODO LT 暂时注释
+//        SECKILL_ORDER_EXECUTOR.submit(new VoucherOrderHandler());
     }
 
     private class VoucherOrderHandler implements Runnable {
