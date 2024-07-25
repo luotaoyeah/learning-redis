@@ -1,6 +1,7 @@
 package com.luotao.learningredis.springdataredis;
 
 import com.luotao.learningredis.User;
+import javax.annotation.Resource;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,9 @@ public class _19 {
 
     @Autowired
     private RedisTemplate<String, Object> redisTemplate;
+
+    @Resource(name = "redisTemplate02")
+    private RedisTemplate<String, Object> redisTemplate02;
 
     @Test
     public void _01() {
@@ -34,5 +38,14 @@ public class _19 {
         Assertions.assertEquals("User(name=LUOTAO, age=18)", user.toString());
 
         Assertions.assertEquals(true, redisTemplate.delete("user:03"));
+    }
+
+    @Test
+    public void _03() {
+        redisTemplate02.opsForValue().set("user:04", new User().setName("LUOTAO").setAge(18));
+
+        User user = (User) redisTemplate02.opsForValue().get("user:04");
+
+        Assertions.assertEquals("User(name=LUOTAO, age=18)", user.toString());
     }
 }
