@@ -51,3 +51,14 @@ SET bar "BAR"
 MGET foo bar
 
 DEL foo bar
+
+-- STRLEN
+-- ----------------------------------------------------------------------------------------------------
+-- 获取值的字符长度, 即有几个字符,
+
+DEL str01
+SET str01 HELLOWORLD
+GET str01
+STRLEN str01
+DEL str01
+
