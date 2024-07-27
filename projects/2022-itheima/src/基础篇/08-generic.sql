@@ -52,3 +52,27 @@ SET foo "FOO"
 EXPIRE foo 10
 TTL foo
 DEL foo
+
+
+-- TYPE
+-- ----------------------------------------------------------------------------------------------------
+-- https://redis.io/docs/latest/commands/type/
+-- 返回值的类型,
+
+SET str:01 "STRING"
+HSET hash:01 name "HASH"
+LPUSH list:01 "LIST"
+SADD set:01 "SET"
+ZADD sortedset:01 0 "ZSET"
+
+TYPE str:01
+TYPE hash:01
+TYPE list:01
+TYPE set:01
+TYPE sortedset:01
+
+DEL str:01
+DEL hash:01
+DEL list:01
+DEL set:01
+DEL sortedset:01
