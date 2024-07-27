@@ -76,3 +76,27 @@ DEL hash:01
 DEL list:01
 DEL set:01
 DEL sortedset:01
+
+
+-- OBJECT ENCODING
+-- ----------------------------------------------------------------------------------------------------
+-- https://redis.io/docs/latest/commands/object-encoding/
+-- 返回值的编码类型,
+
+SET str:01 "STRING"
+HSET hash:01 name "HASH"
+LPUSH list:01 "LIST"
+SADD set:01 "SET"
+ZADD sortedset:01 0 "ZSET"
+
+OBJECT ENCODING str:01
+OBJECT ENCODING hash:01
+OBJECT ENCODING list:01
+OBJECT ENCODING set:01
+OBJECT ENCODING sortedset:01
+
+DEL str:01
+DEL hash:01
+DEL list:01
+DEL set:01
+DEL sortedset:01
