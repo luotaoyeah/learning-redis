@@ -116,7 +116,7 @@ SCAN 51
 -- 参数 MATCH 表示对结果进行过滤, 注意这个过滤是在遍历出数据之后进行过滤, 如果遍历出来的数据都不满足, 则最后返回的数据为空,
 SCAN 0 MATCH XXX*
 
--- 参数 COUNT 表示每次遍历返回几个数据, 默认为 10, 实际返回的数据个数可能比 COUNT 小, 也可能比 COUNT 大, 也 就是 COUNT 参数并不是强制保证的,
+-- 参数 COUNT 表示每次遍历返回几个数据, 默认为 10, 实际返回的数据个数可能比 COUNT 小, 也可能比 COUNT 大, 也就是 COUNT 参数并不是强制保证的,
 SCAN 0 COUNT 5
 SCAN 56 COUNT 5
 SCAN 34 COUNT 5

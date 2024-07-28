@@ -2,6 +2,7 @@ package com.luotao.learningredis.jedis;
 
 import java.util.List;
 import org.junit.jupiter.api.Test;
+import redis.clients.jedis.ScanParams;
 import redis.clients.jedis.ScanResult;
 
 // 高级篇:最佳实践:BIGKEY
@@ -23,6 +24,31 @@ public class _03_03_03 extends _00_01 {
             n = n + 1;
 
             ScanResult<String> scan = jedis.scan(cursor);
+
+            cursor = scan.getCursor();
+
+            List<String> result = scan.getResult();
+            for (int i = 0; i < result.size(); i++) {
+                String key = result.get(i);
+                System.out.printf("%3d. %s%n", i + 1, key);
+            }
+        } while (!cursor.equals("0"));
+    }
+
+    // redis.clients.jedis.ScanParams.match(java.lang.String)
+    @Test
+    public void _02() {
+        // 记录遍历次数
+        int n = 1;
+
+        // 记录当前游标
+        String cursor = "0";
+
+        do {
+            System.out.printf("\n遍历次数: %d\n----------------------------------------------------------------------------------------------------\n", n);
+            n = n + 1;
+
+            ScanResult<String> scan = jedis.scan(cursor, new ScanParams().match("serialNo*"));
 
             cursor = scan.getCursor();
 
