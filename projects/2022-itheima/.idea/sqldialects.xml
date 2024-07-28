@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
-    <file url="file://$PROJECT_DIR$/hmdp/src/main/resources/db/hmdp.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/src/基础篇/08-generic.sql" dialect="Redis" />
     <file url="file://$PROJECT_DIR$/src/基础篇/09-string.sql" dialect="Redis" />
     <file url="file://$PROJECT_DIR$/src/基础篇/11-hash.sql" dialect="Redis" />

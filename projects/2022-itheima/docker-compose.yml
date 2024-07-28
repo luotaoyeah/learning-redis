@@ -1,16 +1,6 @@
 version: "3.7"
 
 services:
-    mysql:
-        image: mysql:5.7.44
-        environment:
-            MYSQL_ROOT_PASSWORD: root
-            MYSQL_ROOT_HOST: "%"
-            TZ: Asia/Shanghai
-        command: --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci --explicit_defaults_for_timestamp=true --lower_case_table_names=1 --max_allowed_packet=128M
-        ports:
-            - "33306:3306"
-
     redis:
         image: redis/redis-stack:6.2.6-v15
         ports:
